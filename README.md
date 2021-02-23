@@ -1,9 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+基于[Next.js](https://nextjs.org/)创建的移动端商城项目，项目脚手架：[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+### 1. clone项目
 
+```bash
+git clone https://github.com/Snail-Lu/mall-vue.git
+```
+
+### 2. 安装依赖
+```bash
+cd mall-vue
+
+npm install
+```
+
+### 3. 启动项目
 ```bash
 npm run dev
 # or
