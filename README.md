@@ -5,7 +5,7 @@
 ### 1. clone项目
 
 ```bash
-git clone https://github.com/Snail-Lu/mall-vue.git
+git clone https://github.com/Snail-Lu/mall-react.git
 ```
 
 ### 2. 安装依赖
