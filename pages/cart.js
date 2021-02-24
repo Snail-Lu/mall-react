@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from '../styles/Cart.module.css';
 import Button from '@material-ui/core/Button';
-import Link from 'next/link'
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import FolderIcon from '@material-ui/icons/Folder';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PersonIcon from '@material-ui/icons/Person';
+import HomeIcon from '@material-ui/icons/Home';
+import CategoryIcon from '@material-ui/icons/Category';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { useRouter } from 'next/router';
 
 export default function Cart() {
-    const [value, setValue] = React.useState('favorites');
+    const router = useRouter();
 
     const handleChange = (event, newValue) => {
-      setValue(newValue);
+      router.push(newValue);
     };
     return (
         <div className={styles.container}>
@@ -21,19 +21,11 @@ export default function Cart() {
                     购物车页
                 </Button>
             </main>
-            <BottomNavigation value={value} onChange={handleChange}>
-                <Link href='/'>
-                    <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-                </Link>
-                <Link href="/category">
-                    <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-                </Link>
-                <Link href="/cart">
-                    <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-                </Link>
-                <Link href="/my">
-                    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-                </Link>
+            <BottomNavigation value="/cart" onChange={handleChange} showLabels>
+                <BottomNavigationAction label="首页" value="/" icon={<HomeIcon />} />
+                <BottomNavigationAction label="分类" value="/category" icon={<CategoryIcon />} />
+                <BottomNavigationAction label="购物车" value="/cart" icon={<ShoppingCartIcon />} />
+                <BottomNavigationAction label="我的" value="/my" icon={<PersonIcon />} />
             </BottomNavigation>
         </div>
     )
