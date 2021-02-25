@@ -10,7 +10,7 @@ git clone https://github.com/Snail-Lu/mall-react.git
 
 ### 2. 安装依赖
 ```bash
-cd mall-vue
+cd mall-react
 
 npm install
 ```
