@@ -1,0 +1,65 @@
+{
+  "id": "2388186",
+  "name": "mall-react",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "20061632",
+      "name": "分类",
+      "font_class": "category-selected",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "20061518",
+      "name": "home",
+      "font_class": "home-selected",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
+      "icon_id": "248969",
+      "name": "user",
+      "font_class": "my",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "248977",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e696",
+      "unicode_decimal": 59030
+    },
+    {
+      "icon_id": "624530",
+      "name": "购物车",
+      "font_class": "cart-selected",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "3652974",
+      "name": "分类",
+      "font_class": "category",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
+    },
+    {
+      "icon_id": "20061581",
+      "name": "购物车",
+      "font_class": "cart",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "20061513",
+      "name": "user",
+      "font_class": "my-selected",
+      "unicode": "e71c",
+      "unicode_decimal": 59164
+    }
+  ]
+}

@@ -1,9 +1,5 @@
 import Head from 'next/head';
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import PersonIcon from '@material-ui/icons/Person';
-import HomeIcon from '@material-ui/icons/Home';
-import CategoryIcon from '@material-ui/icons/Category';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { TabBar, Icon } from 'antd-mobile';
 import { useRouter } from 'next/router';
 import styles from 'styles/layout.module.css';
 
@@ -17,8 +13,8 @@ export default function Layout(props) {
 
   const router = useRouter();
 
-  const handleChange = (event, newValue) => {
-    router.push(newValue);
+  const handleChange = (path) => {
+    router.push(path);
   };
 
   return (
@@ -31,12 +27,51 @@ export default function Layout(props) {
       <main className={styles.main}>
         {children}
       </main>
-      <BottomNavigation value={pathname} onChange={handleChange} showLabels>
-        <BottomNavigationAction label="首页" value="/" icon={<HomeIcon />} />
-        <BottomNavigationAction label="分类" value="/category" icon={<CategoryIcon />} />
-        <BottomNavigationAction label="购物车" value="/cart" icon={<ShoppingCartIcon />} />
-        <BottomNavigationAction label="我的" value="/my" icon={<PersonIcon />} />
-      </BottomNavigation>
+      
+      <footer className={styles.footer}>
+        <TabBar
+          unselectedTintColor="#949494"
+          tintColor="#33A3F4"
+          barTintColor="white"
+        >
+          <TabBar.Item
+            title="首页"
+            key="/"
+            icon={<span className="iconfont icon-home"></span>}
+            selectedIcon={<span className="iconfont icon-home-selected"></span>}
+            selected={pathname === '/'}
+            onPress={()=>handleChange('/')}
+          >
+          </TabBar.Item>
+          <TabBar.Item
+            icon={<span className="iconfont icon-category"></span>}
+            selectedIcon={<span className="iconfont icon-category-selected"></span>}
+            title="分类"
+            key="/category"
+            selected={pathname === '/category'}
+            onPress={()=>handleChange('/category')}
+          >
+          </TabBar.Item>
+          <TabBar.Item
+            icon={<span className="iconfont icon-cart"></span>}
+            selectedIcon={<span className="iconfont icon-cart-selected"></span>}
+            title="购物车"
+            key="/cart"
+            selected={pathname === '/cart'}
+            onPress={()=>handleChange('/cart')}
+          >
+          </TabBar.Item>
+          <TabBar.Item
+            icon={<span className="iconfont icon-my"></span>}
+            selectedIcon={<span className="iconfont icon-my-selected"></span>}
+            title="我的"
+            key="/my"
+            selected={pathname === '/my'}
+            onPress={()=>handleChange('/my')}
+          >
+          </TabBar.Item>
+        </TabBar> 
+      </footer>
     </div>
   )
 }
