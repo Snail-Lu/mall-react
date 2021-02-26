@@ -8,12 +8,11 @@
   
 .main {
   width: 100%;
-  padding: 5rem 0;
   flex: 1;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .footer {
