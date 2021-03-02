@@ -160,11 +160,14 @@ export default class Home extends Component {
           renderSeparator={separator}
           className="am-list"
           pageSize={4}
-          useBodyScroll
           onScroll={() => { console.log('scroll'); }}
           scrollRenderAheadDistance={500}
           onEndReached={this.onEndReached}
           onEndReachedThreshold={10}
+          style={{
+            height: 400,
+            overflow: 'auto',
+          }}
         />
       </Layout>
     )
