@@ -37,15 +37,15 @@ export default function Layout(props) {
           <TabBar.Item
             title="首页"
             key="/"
-            icon={<span className="iconfont icon-home"></span>}
-            selectedIcon={<span className="iconfont icon-home-selected"></span>}
+            icon={<span className={`iconfont icon-home ${styles.tabbar_icon}`}></span>}
+            selectedIcon={<span className={`iconfont icon-home-selected ${styles.tabbar_icon}`}></span>}
             selected={pathname === '/'}
             onPress={()=>handleChange('/')}
           >
           </TabBar.Item>
           <TabBar.Item
-            icon={<span className="iconfont icon-category"></span>}
-            selectedIcon={<span className="iconfont icon-category-selected"></span>}
+            icon={<span className={`iconfont icon-category ${styles.tabbar_icon}`}></span>}
+            selectedIcon={<span className={`iconfont icon-category-selected ${styles.tabbar_icon}`}></span>}
             title="分类"
             key="/category"
             selected={pathname === '/category'}
@@ -53,8 +53,8 @@ export default function Layout(props) {
           >
           </TabBar.Item>
           <TabBar.Item
-            icon={<span className="iconfont icon-cart"></span>}
-            selectedIcon={<span className="iconfont icon-cart-selected"></span>}
+            icon={<span className={`iconfont icon-cart ${styles.tabbar_icon}`}></span>}
+            selectedIcon={<span className={`iconfont icon-cart-selected ${styles.tabbar_icon}`}></span>}
             title="购物车"
             key="/cart"
             selected={pathname === '/cart'}
@@ -62,8 +62,8 @@ export default function Layout(props) {
           >
           </TabBar.Item>
           <TabBar.Item
-            icon={<span className="iconfont icon-my"></span>}
-            selectedIcon={<span className="iconfont icon-my-selected"></span>}
+            icon={<span className={`iconfont icon-my ${styles.tabbar_icon}`}></span>}
+            selectedIcon={<span className={`iconfont icon-my-selected ${styles.tabbar_icon}`}></span>}
             title="我的"
             key="/my"
             selected={pathname === '/my'}
