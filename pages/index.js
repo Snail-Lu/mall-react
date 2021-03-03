@@ -51,18 +51,13 @@ export default class Home extends Component {
   componentDidMount() {
     // simulate img loading
     setTimeout(() => {
-      this.setState({
-        carouselList: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-      });
-    }, 100);
-
-    setTimeout(() => {
       this.rData = genData();
       this.setState({
+        carouselList: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
         dataSource: this.state.dataSource.cloneWithRows(this.rData),
         isLoading: false,
       });
-    }, 600);
+    }, 100);
   }
 
   onEndReached = (event) => {
@@ -165,7 +160,7 @@ export default class Home extends Component {
           onEndReached={this.onEndReached}
           onEndReachedThreshold={10}
           style={{
-            height: 400,
+            height: 800,
             overflow: 'auto',
           }}
         />
